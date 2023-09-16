@@ -164,6 +164,11 @@
         ]
       }
     }
-    ]
+    ],
+    "config": {
+      "view": {
+        "stroke": "transparent"
+      }
+    }
 }
   
