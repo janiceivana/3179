@@ -1,0 +1,62 @@
+
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/no_of_deaths_by_country_clean.csv"},
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "temporal",
+            "title": "Year"
+        },
+        "y": {
+            "field": "Count_median",
+            "type": "quantitative",
+            "title": "Count",
+            "aggregate": "sum"
+        },
+        "color": {
+        "condition": {
+          "param": "hover",
+          "field":"WHO Region",
+          "type":"nominal",
+          "legend": null
+        },
+        "value": "grey"
+      },
+      "opacity": {
+        "condition": {
+          "param": "hover",
+          "value": 1
+        },
+        "value": 0.2
+      }
+    },
+    "layer": [{
+      "description": "transparent layer to make it easier to trigger selection",
+      "params": [{
+        "name": "hover",
+        "value": [{"WHO Region": "Africa"}],
+        "select": {
+          "type": "point",
+          "fields": ["WHO Region"],
+          "on": "mouseover"
+        }
+      }],
+      "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+    }, {
+      "mark": "line"
+    }, {
+        "encoding": {
+            "x": {"field": "Year"}, 
+            "y": {"field": "Count_median"}
+          },
+      "layer": [{
+        "mark": {"type": "circle"}
+      }, {
+        "mark": {"type": "text", "align": "left", "dx": 4},
+        "encoding": {"text": {"field":"WHO Region", "type": "nominal"}}
+      }]
+    }],
+    "config": {"view": {"stroke": null}}
+  }
+  

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A ranged dot plot that uses 'layer' to convey changing life expectancy for the five most populous countries (between 1955 and 2000).",
+  "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_coverage_by_country_clean.csv"},
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "tooltip":true
+      },
+      "encoding": {
+        "x": {
+          "field": "Reported number of people receiving ART",
+          "type": "quantitative",
+          "title": "Received ART",
+          "aggregate":"sum"
+        },
+        "y": {
+          "field": "WHO Region",
+          "type": "nominal",
+          "title": "WHO Region"
+        },
+        "size": {"value": 100},
+        "opacity": {"value": 1}
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "tooltip":true
+      },
+      "encoding": {
+        "x": {
+          "field": "Estimated number of people living with HIV_median",
+          "type": "quantitative",
+          "title": "People with HIV",
+          "aggregate":"sum"
+        },
+        "y": {
+          "field": "WHO Region",
+          "type": "nominal",
+          "title": "WHO Region"
+        },
+        "size": {"value": 100},
+        "opacity": {"value": 1}
+      }
+    }
+  ]
+}
