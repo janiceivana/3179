@@ -1,11 +1,47 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_coverage_by_country_clean.csv"},
-  "mark": "bar",
+  "data": {
+    "url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_coverage_by_country_clean.csv"
+  },
+  "width": "container",
   "encoding": {
-    "x": {"field": "WHO Region"},
-    "y": {"field": "value", "type": "quantitative"},
-    "xOffset": {"field": "group"},
-    "color": {"field": "group"}
+    "x": {
+      "field": "WHO Region","type": "nominal"
   }
+  },
+  "layer": [
+    {
+      "encoding": {
+        "y": {
+          "field": "Reported number of people receiving ART",
+          "type": "quantitative"
+        }
+      },
+      "mark": {
+        "type": "bar",
+        "size": 30,
+        "xOffset": 15,
+        "color": "orange",
+        "tooltip": true
+      }
+    },
+    {
+      "encoding": {
+        "y": {
+          "field": "Estimated number of people living with HIV_median",
+          "type": "quantitative",
+          "aggregate": "sum",
+          "title":"Number of People"
+        }
+      },
+      "mark": {
+        "type": "bar",
+        "xOffset": -15,
+        "size": 30,
+        "color": "red"
+      }
+    }
+  ]
 }
+
+
