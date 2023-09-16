@@ -18,9 +18,7 @@
     "color": {
       "field": "WHO Region",
       "type": "nominal",
-      "scale": {
-        "scheme": "purplered"
-      }
+      "scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}
     }
   }
 }

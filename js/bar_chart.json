@@ -22,7 +22,8 @@
             "title": "WHO Region",
             "sort": { "encoding": "y", "order":"descending"}
         },
-        "color": {"field":"WHO Region", "scale":{"scheme":"purplered"}}
+        "color": {"field":"WHO Region", "scale":{"range":["red","purple","blue","lightgreen","orange","darkgreen"]}
+    }
     },
     "config": {
         "axis": {

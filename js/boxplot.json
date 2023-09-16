@@ -8,7 +8,7 @@
   },
   "encoding": {
     "x": {"field": "WHO Region", "type": "nominal"},
-    "color": {"field": "WHO Region", "type": "nominal", "legend": null,"scale":{"scheme":"purplered"}},
+    "color": {"field": "WHO Region", "type": "nominal", "legend": null,"scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}},
     "y": {
       "field": "Count_median",
       "type": "quantitative",

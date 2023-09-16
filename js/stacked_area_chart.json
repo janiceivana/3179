@@ -31,7 +31,7 @@
             "title": "WHO Region",
             "sort": { "encoding": "y", "order":"descending"}
         },
-        "color": {"field":"WHO Region", "scale":{"scheme":"purplered"}},
+        "color": {"field":"WHO Region","scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}},
         "opacity": {
           "condition": {"param": "Continent", "value": 1},
           "value": 0.2
@@ -54,7 +54,7 @@
         },
         "color": {
           "field":"WHO Region",
-          "scale": {"scheme": "purplered"}   },
+          "scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}},
         
         "opacity": {
           "condition": {"param": "Continent", "value": 1},

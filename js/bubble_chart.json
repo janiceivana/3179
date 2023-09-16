@@ -1,19 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_coverage_by_country_clean.csv"},
-  "params": [{
-    "name": "grid",
-    "select": "interval",
-    "bind": "scales"
-  },{
-    "name": "search_input",
-    "bind": {
-      "input": "search",
-      "placeholder": "WHO Region",
-      "name": "Search"
-    },
-    "value": ""
-  }],
+  "data": {
+    "url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_coverage_by_country_clean.csv"
+  },
+  "width":"container","height":500,
+  "params": [
+    {
+      "name": "grid",
+      "select": "interval",
+      "bind": "scales"
+    }
+  ],
   "layer": [
     {
       "mark": {
@@ -25,22 +22,62 @@
         "y": {
           "field": "Reported number of people receiving ART",
           "type": "quantitative",
-          "scale": {"domain": [0, 5000000]}
+          "scale": {
+            "domain": [
+              0,
+              5000000
+            ]
+          }
         },
         "x": {
           "field": "Estimated number of people living with HIV_median",
           "type": "quantitative",
-          "scale": {"domain": [0, 8000000]}
-        },
-        "size": {"field": "Estimated ART coverage among people living with HIV (%)_median", "type": "quantitative"},
-        "color":{"field": "Country", "type":"nominal"},
-        "opacity": {
-          "condition": {
-            "test": "test(regexp(search_input,'i'),datum['WHO Region'])",
-            "value": 1
+          "scale": {
+            "domain": [
+              0,
+              8000000
+            ]
           },
-          "value": 0.1
-        }
+          "title": "Estimated number of people living with HIV"
+        },
+        "size": {
+          "field": "Estimated ART coverage among people living with HIV (%)_median",
+          "type": "quantitative",
+          "title": "Estimated ART coverage among people living with HIV (%)",
+          "legend": {
+            "orient": "bottom","direction": "vertical"
+          }
+        },
+        "color": {
+          "field": "WHO Region",
+          "type": "nominal",
+          "legend": {
+            "orient": "bottom","direction": "vertical"
+          },
+          "scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}
+        },
+        "tooltip": [
+          {
+            "field": "Reported number of people receiving ART",
+            "type": "quantitative"
+          },
+          {
+            "field": "Estimated number of people living with HIV_median",
+            "type": "quantitative"
+          },
+          {
+            "field": "WHO Region",
+            "type": "nominal"
+          },
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Estimated ART coverage among people living with HIV (%)_median",
+            "type": "quantitative"
+          }
+        ]
       }
     }
   ]
