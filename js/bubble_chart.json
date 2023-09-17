@@ -3,12 +3,58 @@
   "data": {
     "url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_coverage_by_country_clean.csv"
   },
-  "width":"container","height":500,
+  "width": 500,
+  "height": 500,
   "params": [
     {
-      "name": "grid",
-      "select": "interval",
-      "bind": "scales"
+      "name": "Received_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "name": "Minimum % Received: "
+      }
+    },
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Africa",
+          "Americas",
+          "Eastern Mediterranean",
+          "Europe",
+          "South-East Asia",
+          "Western Pacific"
+        ],
+        "labels": [
+          "Show All",
+          "Africa",
+          "Americas",
+          "Eastern Mediterranean",
+          "Europe",
+          "South-East Asia",
+          "Western Pacific"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum['Reported number of people receiving ART'] > 0"
+    },
+    {
+      "filter": "datum['Estimated number of people living with HIV_median'] > 0"
+    },
+    {
+      "filter": "datum['Estimated ART coverage among people living with HIV (%)_median'] > Received_Above"
+    },
+    {
+      "filter": "Continent_selection == null || datum['WHO Region'] == Continent_selection"
     }
   ],
   "layer": [
@@ -22,6 +68,7 @@
         "y": {
           "field": "Reported number of people receiving ART",
           "type": "quantitative",
+          "aggregate":"sum",
           "scale": {
             "domain": [
               0,
@@ -32,6 +79,7 @@
         "x": {
           "field": "Estimated number of people living with HIV_median",
           "type": "quantitative",
+          "aggregate":"sum",
           "scale": {
             "domain": [
               0,
@@ -45,16 +93,35 @@
           "type": "quantitative",
           "title": "Estimated ART coverage among people living with HIV (%)",
           "legend": {
-            "orient": "bottom","direction": "vertical"
+            "orient": "bottom",
+            "direction": "vertical"
           }
         },
         "color": {
           "field": "WHO Region",
           "type": "nominal",
           "legend": {
-            "orient": "bottom","direction": "vertical"
+            "orient": "bottom",
+            "direction": "vertical"
           },
-          "scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}
+          "scale": {
+            "domain": [
+              "Africa",
+              "Americas",
+              "Eastern Mediterranean",
+              "Europe",
+              "South-East Asia",
+              "Western Pacific"
+            ],
+            "range": [
+              "pink",
+              "purple",
+              "blue",
+              "lightgreen",
+              "orange",
+              "darkgreen"
+            ]
+          }
         },
         "tooltip": [
           {
@@ -63,7 +130,8 @@
           },
           {
             "field": "Estimated number of people living with HIV_median",
-            "type": "quantitative"
+            "type": "quantitative",
+            "format": ","
           },
           {
             "field": "WHO Region",
@@ -75,7 +143,68 @@
           },
           {
             "field": "Estimated ART coverage among people living with HIV (%)_median",
+            "type": "quantitative",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {
+          "field": "Country",
+          "type": "nominal"
+        },
+        "x": {
+          "type": "quantitative",
+          "field": "Estimated number of people living with HIV_median",
+          "aggregate":"sum"
+        },
+        "y": {
+          "type": "quantitative",
+          "field": "Reported number of people receiving ART",
+          "aggregate":"sum"
+        },
+        "color": {
+          "value": "black"
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum['Country'] == 'Brazil' || datum['Country'] == 'Zimbabwe' || datum['Country'] == 'Australia' || datum['Country'] == 'South Africa' || datum['Country'] == 'Indonesia'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "Reported number of people receiving ART",
             "type": "quantitative"
+          },
+          {
+            "field": "Estimated number of people living with HIV_median",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "WHO Region",
+            "type": "nominal"
+          },
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Estimated ART coverage among people living with HIV (%)_median",
+            "type": "quantitative",
+            "format": ","
           }
         ]
       }
