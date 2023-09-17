@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_coverage_by_country_clean.csv"
+    "url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_pediatric_coverage_by_country_clean.csv"
   },
   "width": 500,
   "height": 500,
@@ -56,16 +56,16 @@
   ],
   "transform": [
     {
-      "filter": "datum['Reported number of people receiving ART'] > 0"
+      "filter": "datum['Reported number of children receiving ART'] > 0"
     },
     {
-      "filter": "datum['Estimated number of people living with HIV_median'] > 0"
+      "filter": "datum['Estimated number of children needing ART based on WHO methods_median'] > 0"
     },
     {
-      "filter": "datum['Estimated ART coverage among people living with HIV (%)_median'] < Received_Below"
+      "filter": "datum['Estimated ART coverage among children (%)_median'] < Received_Below"
     },  
     {
-      "filter": "datum['Estimated ART coverage among people living with HIV (%)_median'] > Received_Above"
+      "filter": "datum['Estimated ART coverage among children (%)_median'] > Received_Above"
     },
     {
       "filter": "Continent_selection == null || datum['WHO Region'] == Continent_selection"
@@ -80,20 +80,21 @@
       },
       "encoding": {
         "y": {
-          "field": "Reported number of people receiving ART",
+          "field": "Reported number of children receiving ART",
           "type": "quantitative",
           "aggregate":"sum"
         },
         "x": {
-          "field": "Estimated number of people living with HIV_median",
+          "field": "Estimated number of children needing ART based on WHO methods_median",
           "type": "quantitative",
           "aggregate":"sum",
-          "title": "Estimated number of people living with HIV"
+          "title": "Estimated number of children needing ART"
         },
         "size": {
-          "field": "Estimated ART coverage among people living with HIV (%)_median",
+          "field": "Estimated ART coverage among children (%)_median",
           "type": "quantitative",
-          "title": "Estimated ART coverage among people living with HIV (%)",
+          "aggregate":"sum",
+          "title": "Estimated ART coverage among children (%)",
           "legend": {
             "orient": "bottom",
             "direction": "vertical"
@@ -128,11 +129,11 @@
         "opacity":{"value":0.5},
         "tooltip": [
           {
-            "field": "Reported number of people receiving ART",
+            "field": "Reported number of children receiving ART",
             "type": "quantitative"
           },
           {
-            "field": "Estimated number of people living with HIV_median",
+            "field": "Estimated number of children needing ART based on WHO methods_median",
             "type": "quantitative",
             "format": ","
           },
@@ -145,7 +146,7 @@
             "type": "nominal"
           },
           {
-            "field": "Estimated ART coverage among people living with HIV (%)_median",
+            "field": "Estimated ART coverage among children (%)_median",
             "type": "quantitative",
             "format": ","
           }
@@ -168,12 +169,12 @@
         },
         "x": {
           "type": "quantitative",
-          "field": "Estimated number of people living with HIV_median",
+          "field": "Estimated number of children needing ART based on WHO methods_median",
           "aggregate":"sum"
         },
         "y": {
           "type": "quantitative",
-          "field": "Reported number of people receiving ART",
+          "field": "Reported number of children receiving ART",
           "aggregate":"sum"
         },
         "color": {
@@ -181,18 +182,18 @@
         },
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'Colombia' || datum['Country'] == 'Zimbabwe' || datum['Country'] == 'Australia' || datum['Country'] == 'South Africa' || datum['Country'] == 'Indonesia'|| datum['Country'] == 'Morocco'|| datum['Country'] == 'Italy'|| datum['Country'] == 'Thailand'",
+            "test": "datum['Country'] == 'Madagascar' || datum['Country'] == 'El Salvador' || datum['Country'] == 'Djibouti' || datum['Country'] == Republic of Moldova' || datum['Country'] == 'Indonesia'",
             "value": 1
           },
           "value": 0
         },
         "tooltip": [
           {
-            "field": "Reported number of people receiving ART",
+            "field": "Reported number of children receiving ART",
             "type": "quantitative"
           },
           {
-            "field": "Estimated number of people living with HIV_median",
+            "field": "Estimated number of children needing ART based on WHO methods_median",
             "type": "quantitative",
             "format": ","
           },
@@ -205,7 +206,7 @@
             "type": "nominal"
           },
           {
-            "field": "Estimated ART coverage among people living with HIV (%)_median",
+            "field": "Estimated ART coverage among children (%)_median",
             "type": "quantitative",
             "format": ","
           }

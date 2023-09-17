@@ -50,7 +50,7 @@
     }, {
         "encoding": {
             "x": {"field": "Year"}, 
-            "y": {"field": "Count_median"}
+            "y": {"field": "Count_median","aggregate":"sum"}
           },
       "layer": [{
         "mark": {"type": "circle"}
