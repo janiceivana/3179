@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/prevention_of_mother_to_child_transmission_by_country_clean.csv"},
+  "width":"container","height":500,
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "hover",
+          "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}
+        }
+      ],
+      "mark": {"type": "bar", "color": "#eee", "tooltip": true},
+      "encoding": {
+        "x": {"bin": true, "field": "Percentage Recieved_median"},
+        "opacity": {
+          "condition": {"test": {"param": "hover", "empty": false}, "value": 0.5},
+          "value": 0
+        },
+        "detail": [{"aggregate": "count"}]
+      }
+    },
+    {
+      "mark": {"type":"bar","color":"pink"},
+      "encoding": {
+        "x": {"bin": true, "field": "Percentage Recieved_median"},
+        "y": {"aggregate": "count"}
+      }
+    }
+  ]
+}

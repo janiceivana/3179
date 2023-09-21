@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_coverage_by_country_clean.csv"
+    "url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_pediatric_coverage_by_country_clean.csv"
   },
   "width":"container","height":500,
   "encoding": {
@@ -45,7 +45,7 @@
     {
       "encoding": {
         "y": {
-          "field": "Reported number of people receiving ART",
+          "field": "Reported number of children receiving ART",
           "type": "quantitative"
         }
       },
@@ -60,7 +60,7 @@
     {
       "encoding": {
         "y": {
-          "field": "Estimated number of people living with HIV_median",
+          "field": "Estimated number of children needing ART based on WHO methods_median",
           "type": "quantitative",
           "aggregate": "sum",
           "title":"Number of People"
