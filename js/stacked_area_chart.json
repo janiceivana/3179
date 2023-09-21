@@ -14,22 +14,16 @@
     {
       "width":350, "height": 500,
       "mark": {
-        "type": "bar",
-        "filled": true,
-        "tooltip":true
+        "type": "arc",
+        "innerRadius": 50,
+        "tooltip": true
       },
-    "encoding": {
-        "y": {
-            "field": "Count_median",
-            "type": "quantitative",
-            "aggregate":"sum",
-            "title":"Number of Death caused by HIV"
-        },
-        "x": {
-            "field": "WHO Region",
-            "type": "nominal",
-            "title": "WHO Region",
-            "sort": { "encoding": "y", "order":"descending"}
+      "encoding": {
+        "theta": {
+          "field": "Count_median",
+          "type": "quantitative",
+          "aggregate": "sum",
+          "title":"Sum of Death Cases"
         },
         "color": {"field":"WHO Region","scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}},
         "opacity": {

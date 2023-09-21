@@ -13,7 +13,8 @@
     "theta": {
       "field": "Count_median",
       "type": "quantitative",
-      "aggregate": "sum"
+      "aggregate": "sum",
+      "title":"Sum of Death Cases"
     },
     "color": {
       "field": "WHO Region",
