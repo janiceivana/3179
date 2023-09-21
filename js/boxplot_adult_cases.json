@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width":300, "height":500,
+  "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/no_of_cases_adults_15_to_49_by_country_clean.csv"},
+  "mark": {
+    "type": "boxplot",
+    "extent": "min-max"
+  },
+  "encoding": {
+    "x": {"field": "WHO Region", "type": "nominal"},
+    "color": {"field": "WHO Region", "type": "nominal", "legend": null,"scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}},    "y": {
+      "field": "Count_median",
+      "type": "quantitative",
+      "scale": {"zero": false},
+      "title":"Average of Adult Cases with HIV (%)"
+    }
+  }
+}
