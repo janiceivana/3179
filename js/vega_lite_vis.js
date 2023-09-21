@@ -89,8 +89,8 @@ vegaEmbed('#grouped_bar', spec10).then(function(result) {
 //     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 // }).catch(console.error);
 
-var spec11 = "js/bubble_chart_pediatric.json";
-vegaEmbed('#bubble_pediatric', spec11).then(function(result) {
+var spec19 = "js/bubble_chart_pediatric.json";
+vegaEmbed('#bubble_pediatric', spec19).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
@@ -140,8 +140,8 @@ vegaEmbed('#bubble_pediatric', spec11).then(function(result) {
 //     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 // }).catch(console.error);
 
-var spec12 = "js/bubble_chart_pregnant.json";
-vegaEmbed('#bubble_pregnant', spec12).then(function(result) {
+var spec29 = "js/bubble_chart_pregnant.json";
+vegaEmbed('#bubble_pregnant', spec29).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
