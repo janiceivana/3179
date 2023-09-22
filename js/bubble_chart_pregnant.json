@@ -3,7 +3,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/janiceivana/3179/main/prevention_of_mother_to_child_transmission_by_country_clean.csv"
   },
-  "width": 500,
+  "width": "container",
   "height": 500,
   "params": [
     {
@@ -156,7 +156,7 @@
     {
       "mark": {
         "type": "text",
-        "align": "right",
+        "align": "left",
         "baseline": "middle",
         "dx": -12,
         "fontSize": 11.5,

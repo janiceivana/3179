@@ -1,6 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width":300, "height":500,
+  "title": {
+    "text": "Number of People Living with HIV",
+  "fontSize": 16},
   "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/no_of_people_living_with_hiv_by_country_clean.csv"},
   "mark": {
     "type": "boxplot",

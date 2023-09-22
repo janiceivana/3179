@@ -12,6 +12,9 @@
   },
   "hconcat":[
     {
+      "title": {
+        "text": "Distribution Number of People Living with HIV",
+      "fontSize": 16},
       "width":350, "height": 500,
       "mark": {
         "type": "bar",
@@ -39,7 +42,9 @@
     }
     },
     {
-      
+      "title": {
+        "text": "Trends Number of People Living with HIV",
+      "fontSize": 16},
       "width": 350, "height": 500,
       "mark": {"type": "area","stroke":"black"},
       "encoding": {

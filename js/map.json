@@ -1,6 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "HIV Worldwide Death Cases (2000, 2010, & 2018)",
+    "title": {
+      "text": "HIV Worldwide Death Cases (2000, 2010, & 2018)",
+    "fontSize": 36,
+  "font": "Times New Roman"},
     "width": "container",
     "height": 500,
     "params": [

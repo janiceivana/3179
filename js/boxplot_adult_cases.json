@@ -1,5 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average of Death Cases for Each Continent",
+  "fontSize": 16},
   "width":300, "height":500,
   "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/no_of_cases_adults_15_to_49_by_country_clean.csv"},
   "mark": {

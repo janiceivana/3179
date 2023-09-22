@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/no_of_cases_adults_15_to_49_by_country_clean.csv"},
-  
   "params": [{
     "name": "Continent",
     "select": {"type": "point", "fields": ["WHO Region"]},
@@ -13,6 +12,9 @@
   "hconcat":[
     {
       "width":350, "height": 500,
+      "title": {
+        "text": "Distribution Average of Death Cases (Bar Chart)",
+      "fontSize": 16},
       "mark": {
         "type": "bar",
         "filled": true,
@@ -39,7 +41,9 @@
     }
     },
     {
-      
+      "title": {
+        "text": "Trends Average of Death Cases",
+      "fontSize": 16},
       "width": 350, "height": 500,
       "mark": {"type": "area","stroke":"black"},
       "encoding": {
