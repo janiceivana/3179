@@ -4,6 +4,9 @@
     "url": "https://raw.githubusercontent.com/janiceivana/3179/main/prevention_of_mother_to_child_transmission_by_country_clean.csv"
   },
   "width":"container","height":500,
+  "title": {
+    "text": "Pregnant Women with HIV vs Received ART",
+  "fontSize": 16},
   "encoding": {
     "x": {
       "field": "WHO Region","type": "nominal"
