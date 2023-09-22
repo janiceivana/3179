@@ -2,6 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/prevention_of_mother_to_child_transmission_by_country_clean.csv"},
   "width":"container","height":500,
+  "title": {
+    "text": "Density of % ART Received for Pregnant Women",
+  "fontSize": 16},
   "layer": [
     {
       "params": [
@@ -12,7 +15,7 @@
       ],
       "mark": {"type": "bar", "color": "#eee", "tooltip": true},
       "encoding": {
-        "x": {"bin": true, "field": "Percentage Recieved_median"},
+        "x": {"bin": true, "field": "Percentage Recieved_median","title":"% ART Received for Pregnant Women with HIV"},
         "opacity": {
           "condition": {"test": {"param": "hover", "empty": false}, "value": 0.5},
           "value": 0
@@ -23,7 +26,7 @@
     {
       "mark": {"type":"bar","color":"pink"},
       "encoding": {
-        "x": {"bin": true, "field": "Percentage Recieved_median"},
+        "x": {"bin": true, "field": "Percentage Recieved_median","title":"% ART Received for Pregnant Women with HIV"},
         "y": {"aggregate": "count"}
       }
     }

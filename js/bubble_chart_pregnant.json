@@ -4,6 +4,9 @@
     "url": "https://raw.githubusercontent.com/janiceivana/3179/main/prevention_of_mother_to_child_transmission_by_country_clean.csv"
   },
   "width": "container",
+  "title": {
+    "text": "Correlation Living with HIV and Received ART",
+  "fontSize": 16},
   "height": 500,
   "params": [
     {

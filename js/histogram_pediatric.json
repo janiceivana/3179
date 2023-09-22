@@ -1,6 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_pediatric_coverage_by_country_clean.csv"},
+  "title": {
+    "text": "Density of % ART Received for Pediatric",
+  "fontSize": 16},
   "width":"container","height":500,
   "layer": [
     {
@@ -12,7 +15,7 @@
       ],
       "mark": {"type": "bar", "color": "#eee", "tooltip": true},
       "encoding": {
-        "x": {"bin": true, "field": "Estimated ART coverage among children (%)_median"},
+        "x": {"bin": true, "field": "Estimated ART coverage among children (%)_median","title":"% ART Received for Pediatric with HIV"},
         "opacity": {
           "condition": {"test": {"param": "hover", "empty": false}, "value": 0.5},
           "value": 0
@@ -23,7 +26,7 @@
     {
       "mark": {"type":"bar","color":"pink"},
       "encoding": {
-        "x": {"bin": true, "field": "Estimated ART coverage among children (%)_median"},
+        "x": {"bin": true, "field": "Estimated ART coverage among children (%)_median","title":"% ART Received for Pediatric with HIV"},
         "y": {"aggregate": "count"}
       }
     }

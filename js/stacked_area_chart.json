@@ -12,6 +12,9 @@
   },
   "hconcat":[
     {
+      "title": {
+        "text": "Distribution Number of Death caused by HIV",
+      "fontSize": 16},
       "width":350, "height": 500,
       "mark": {
         "type": "arc",
@@ -33,7 +36,9 @@
     }
     },
     {
-      
+      "title": {
+        "text": "Trends Number of Death caused by HIV",
+      "fontSize": 16},
       "width": 350, "height": 500,
       "mark": {"type": "area","stroke":"black"},
       "encoding": {
