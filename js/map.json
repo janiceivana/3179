@@ -1,12 +1,12 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "HIV Worldwide Death Cases (2000, 2010, & 2018)",
-    "width": 700,
-    "height": 400,
+    "width": "container",
+    "height": 500,
     "params": [
     {
         "name": "zoom_level",
-        "value": 120,
+        "value": 200,
         "bind": {
           "input": "range",
           "min": 100,

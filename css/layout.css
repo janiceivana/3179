@@ -7,7 +7,8 @@
 h1 {
     text-align: center;
     color: #c82121;
-    font-size: 40px;
+
+	font-size: 40px;
 }
 
 p {
@@ -39,12 +40,11 @@ body {
 .vis-container {
 	width: 100%;
 	border-radius: 10px;
-    margin-top: 8%;
-	margin-bottom: 2%;
+    margin-top: 3%;
 }
 
 .pure-g {
-	margin-bottom: 300px;
+	margin-bottom: 10px;
 }
 
 .top-page {
@@ -52,6 +52,9 @@ body {
 	margin-right: 5%;
 	margin-top: 5%;
 	margin-bottom: 2%;
+	border-radius: 10px;
+	background-color: white;
+	width: 1560px;
 }
 
 .bottom-page {
