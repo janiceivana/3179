@@ -6,7 +6,7 @@
 
 h1 {
     text-align: center;
-    color: #c82121;
+    color: #d81c1ce4;
 
 	font-size: 40px;
 }
@@ -17,7 +17,7 @@ p {
 }
 
 body {
-	background-color: rgba(247, 14, 14, 0.221);
+	background-color: #f70d0d38;
 	width: 1600px;
 }
 
@@ -35,6 +35,7 @@ body {
 	margin-left: 30px;
 	margin-right: 30px;
 	border-radius: 10px;
+	
 }
 
 .vis-container {
@@ -48,12 +49,12 @@ body {
 }
 
 .top-page {
+	background-color:white;
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-top: 5%;
 	margin-bottom: 2%;
 	border-radius: 10px;
-	background-color: white;
 	width: 1560px;
 }
 
@@ -65,9 +66,10 @@ body {
 }
 
 .intro-paragraph {
-	margin-right: 20%;
+	margin-right: 5%;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 25px;
+	margin-left: 5%;
 }
 
 .sub-title {
