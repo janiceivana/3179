@@ -1,0 +1,40 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 500,
+    "data": {
+        "url": "https://raw.githubusercontent.com/janiceivana/3179/main/no_of_people_living_with_hiv_by_country_clean.csv"
+    },
+    "params": [{
+        "name": "Continent",
+        "select": {"type": "point", "fields": ["WHO Region"]},
+        "bind": "legend"
+      }],
+      "title": {
+        "text": "Distribution Number of People Living with HIV",
+      "fontSize": 16},
+      "mark": {
+        "type": "bar",
+        "filled": true,
+        "tooltip":true
+      },
+    "encoding": {
+        "y": {
+            "field": "Count_median",
+            "type": "quantitative",
+            "aggregate":"sum",
+            "title":"Number of People Living with HIV"
+        },
+        "x": {
+            "field": "WHO Region",
+            "type": "nominal",
+            "title": "WHO Region",
+            "sort": { "encoding": "y", "order":"descending"}
+        },
+        "color": {"field":"WHO Region","scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}},
+        "opacity": {
+          "condition": {"param": "Continent", "value": 1},
+          "value": 0.2
+        }
+    }
+}

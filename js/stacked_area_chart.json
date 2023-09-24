@@ -2,44 +2,47 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/no_of_deaths_by_country_clean.csv"},
   
-  "params": [{
-    "name": "Continent",
-    "select": {"type": "point", "fields": ["WHO Region"]},
-    "bind": "legend"
-  }],
+  "params": [
+    {
+      "name": "Continent",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Africa",
+          "Americas",
+          "Eastern Mediterranean",
+          "Europe",
+          "South-East Asia",
+          "Western Pacific"
+        ],
+        "labels": [
+          "Show All",
+          "Africa",
+          "Americas",
+          "Eastern Mediterranean",
+          "Europe",
+          "South-East Asia",
+          "Western Pacific"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "Continent == null || datum['WHO Region'] == Continent"
+    }
+  ],
   "config": {
     "legend": {"orient": "left"}
   },
   "hconcat":[
     {
       "title": {
-        "text": "Distribution Number of Death caused by HIV",
-      "fontSize": 16},
-      "width":350, "height": 500,
-      "mark": {
-        "type": "arc",
-        "innerRadius": 50,
-        "tooltip": true
-      },
-      "encoding": {
-        "theta": {
-          "field": "Count_median",
-          "type": "quantitative",
-          "aggregate": "sum",
-          "title":"Sum of Death Cases"
-        },
-        "color": {"field":"WHO Region","scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}},
-        "opacity": {
-          "condition": {"param": "Continent", "value": 1},
-          "value": 0.2
-        }
-    }
-    },
-    {
-      "title": {
         "text": "Trends Number of Death caused by HIV",
       "fontSize": 16},
-      "width": 350, "height": 500,
+      "width": 400, "height": 500,
       "mark": {"type": "area","stroke":"black"},
       "encoding": {
         "x": {
@@ -52,22 +55,80 @@
           "title":"Number of Death caused by HIV"
         },
         "color": {
-          "field":"WHO Region",
-          "scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}},
-        
-        "opacity": {
-          "condition": {"param": "Continent", "value": 1},
-          "value": 0.2
-        },
-        "tooltip": [
-          {"field": "Year"},
-          {"field": "WHO Region"},
-          {"aggregate":"sum","field": "Count_median", "type": "quantitative"}
-        ]
-      }
+          "field": "WHO Region",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Africa",
+              "Americas",
+              "Eastern Mediterranean",
+              "Europe",
+              "South-East Asia",
+              "Western Pacific"
+            ],
+            "range": [
+              "pink",
+              "purple",
+              "blue",
+              "lightgreen",
+              "orange",
+              "darkgreen"
+            ]
+          }
+      },
     
+      "tooltip": [
+        {"field": "Year"},
+        {"field": "WHO Region"},
+        {"aggregate":"sum","field": "Count_median", "type": "quantitative"}
+      ]
     }
+  },
+  {
+    
+    "width":400, "height":500,
+    "title": {
+      "text": "Number of Death caused by HIV",
+    "fontSize": 16},
+    "mark": {
+      "type": "boxplot",
+      "extent": "min-max"
+    },
+    "encoding": {
+      "x": {"field": "WHO Region", "type": "nominal"},
+      "color": {
+        "field": "WHO Region",
+        "type": "nominal",
+        "legend": null,
+        "scale": {
+          "domain": [
+            "Africa",
+            "Americas",
+            "Eastern Mediterranean",
+            "Europe",
+            "South-East Asia",
+            "Western Pacific"
+          ],
+          "range": [
+            "pink",
+            "purple",
+            "blue",
+            "lightgreen",
+            "orange",
+            "darkgreen"
+          ]
+        }
+      },
+        "y": {
+        "field": "Count_median",
+        "type": "quantitative",
+        "scale": {"zero": false},
+        "title":"Number of Death caused by HIV"
+      }
+    }
+  }
   ]
+  
   
 }
 

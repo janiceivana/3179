@@ -2,50 +2,44 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/no_of_people_living_with_hiv_by_country_clean.csv"},
   
-  "params": [{
-    "name": "Continent",
-    "select": {"type": "point", "fields": ["WHO Region"]},
-    "bind": "legend"
-  }],
-  "config": {
-    "legend": {"orient": "left"}
-  },
-  "hconcat":[
+  "params": [
     {
-      "title": {
-        "text": "Distribution Number of People Living with HIV",
-      "fontSize": 16},
-      "width":350, "height": 500,
-      "mark": {
-        "type": "bar",
-        "filled": true,
-        "tooltip":true
-      },
-    "encoding": {
-        "y": {
-            "field": "Count_median",
-            "type": "quantitative",
-            "aggregate":"sum",
-            "title":"Number of People Living with HIV"
-        },
-        "x": {
-            "field": "WHO Region",
-            "type": "nominal",
-            "title": "WHO Region",
-            "sort": { "encoding": "y", "order":"descending"}
-        },
-        "color": {"field":"WHO Region","scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}},
-        "opacity": {
-          "condition": {"param": "Continent", "value": 1},
-          "value": 0.2
-        }
+      "name": "Continent",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Africa",
+          "Americas",
+          "Eastern Mediterranean",
+          "Europe",
+          "South-East Asia",
+          "Western Pacific"
+        ],
+        "labels": [
+          "Show All",
+          "Africa",
+          "Americas",
+          "Eastern Mediterranean",
+          "Europe",
+          "South-East Asia",
+          "Western Pacific"
+        ],
+        "name": "Continent Selection: "
+      }
     }
-    },
+  ],
+  "transform": [
+    {
+      "filter": "Continent == null || datum['WHO Region'] == Continent"
+    }
+  ],
+  "hconcat":[
     {
       "title": {
         "text": "Trends Number of People Living with HIV",
       "fontSize": 16},
-      "width": 350, "height": 500,
+      "width": 400, "height": 500,
       "mark": {"type": "area","stroke":"black"},
       "encoding": {
         "x": {
@@ -58,12 +52,27 @@
           "title":"Number of People Living with HIV"
         },
         "color": {
-          "field":"WHO Region",
-          "scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}},
-        
-        "opacity": {
-          "condition": {"param": "Continent", "value": 1},
-          "value": 0.2
+        "field": "WHO Region",
+        "type": "nominal",
+        "legend": null,
+        "scale": {
+          "domain": [
+            "Africa",
+            "Americas",
+            "Eastern Mediterranean",
+            "Europe",
+            "South-East Asia",
+            "Western Pacific"
+          ],
+          "range": [
+            "pink",
+            "purple",
+            "blue",
+            "lightgreen",
+            "orange",
+            "darkgreen"
+          ]
+        }
         },
         "tooltip": [
           {"field": "Year"},
@@ -72,6 +81,47 @@
         ]
       }
     
+    },
+    {
+      "width":400, "height":500,
+      "title": {
+        "text": "Number of People Living with HIV",
+      "fontSize": 16},
+      "mark": {
+        "type": "boxplot",
+        "extent": "min-max"
+      },
+      "encoding": {
+        "x": {"field": "WHO Region", "type": "nominal"},
+        "color": {
+          "field": "WHO Region",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Africa",
+              "Americas",
+              "Eastern Mediterranean",
+              "Europe",
+              "South-East Asia",
+              "Western Pacific"
+            ],
+            "range": [
+              "pink",
+              "purple",
+              "blue",
+              "lightgreen",
+              "orange",
+              "darkgreen"
+            ]
+          }
+          },        "y": {
+          "field": "Count_median",
+          "type": "quantitative",
+          "scale": {"zero": false},
+          "title":"Number of People Living with HIV"
+        }
+      }
     }
   ]
   
