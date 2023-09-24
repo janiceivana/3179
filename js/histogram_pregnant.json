@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/prevention_of_mother_to_child_transmission_by_country_clean.csv"},
-  "width":"container","height":500,
+  "width":400,"height":500,
   "title": {
     "text": "Density of % ART Received for Pregnant Women",
   "fontSize": 16},

@@ -4,7 +4,7 @@
   "title": {
     "text": "Density of % ART Received for Pediatric",
   "fontSize": 16},
-  "width":"container","height":500,
+  "width":400,"height":500,
   "layer": [
     {
       "params": [
