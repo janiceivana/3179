@@ -185,7 +185,7 @@
         },
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'Madagascar' || datum['Country'] == 'El Salvador' || datum['Country'] == 'Djibouti' || datum['Country'] == 'Republic of Moldova' || datum['Country'] == 'Indonesia'",
+            "test": "datum['Country'] == 'Algeria' || datum['Country'] == 'Argentina' || datum['Country'] == 'Morocco' || datum['Country'] == 'Ukraine' || datum['Country'] == 'Thailand' || datum['Country'] == 'Malaysia'",
             "value": 1
           },
           "value": 0
