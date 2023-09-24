@@ -123,6 +123,7 @@
         "field": "Count_median",
         "type": "quantitative",
         "scale": {"zero": false},
+        "aggregate":"sum",
         "title":"Number of Death caused by HIV"
       }
     }
