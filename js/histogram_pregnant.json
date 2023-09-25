@@ -4,7 +4,8 @@
   "width":400,"height":500,
   "title": {
     "text": "Density of % ART Received for Pregnant Women",
-  "fontSize": 16},
+  "fontSize": 16,
+  "font": "Lora"},
   "layer": [
     {
       "params": [

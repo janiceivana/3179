@@ -7,7 +7,8 @@
   "height": 500,
   "title": {
     "text": "Correlation Living with HIV and Received ART",
-  "fontSize": 16},
+  "fontSize": 16,
+  "font": "Lora"},
   "params": [
     {
       "name": "Received_Above",

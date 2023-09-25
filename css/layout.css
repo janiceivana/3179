@@ -1,20 +1,4 @@
 
-#text_div {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-h1 {
-    text-align: center;
-    color: #d81c1ce4;
-	font-size: 40px;
-}
-
-h2 {
-	font-weight: bold;
-	font-style: italic;
-	
-}
 
 p {
     color: #0b0b0b7a;
@@ -72,14 +56,15 @@ body {
 
 .intro-paragraph {
 	margin-right: 5%;
-	font-family: 'Source Sans Pro', sans-serif;
+	/* font-family: 'Source Sans Pro', sans-serif; */
+	font-family: 'Lora', sans-serif;
 	font-size: 25px;
 	margin-left: 5%;
 	text-align: justify;
 }
 
 .sub-title {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Inclusive Sans', sans-serif;
 	font-weight: bold;
 	font-size: 45px;
 	margin-top: 50px;
@@ -93,17 +78,19 @@ body {
 	margin-right: 30px;
 	font-size: 23px;
 	text-align: justify;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Lora', sans-serif;
 }
 
 .vis-mark{
 	margin-right: 20%;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Inclusive Sans', sans-serif;
 	font-size: 25px;
 }
 
 h1 {
 	font-weight: 900;
 	font-size: 80px;
-	font-family: 'GFS Didot', serif;
+	font-family: 'Inclusive Sans', serif;
+    text-align: center;
+    color: #d81c1ce4;
 }

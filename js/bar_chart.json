@@ -12,7 +12,8 @@
       }],
     "title": {
         "text": "Distribution Number of Death caused by HIV",
-        "fontSize": 16
+        "fontSize": 16,
+        "font": "Lora"
     },
     "mark": {
         "type": "bar",

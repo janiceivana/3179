@@ -6,7 +6,8 @@
   "width":"container","height":500,
   "title": {
     "text": "Pediatric with HIV vs Received ART",
-  "fontSize": 16},
+  "fontSize": 16,
+  "font": "Lora"},
   "encoding": {
     "x": {
       "field": "WHO Region","type": "nominal"

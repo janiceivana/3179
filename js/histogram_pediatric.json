@@ -3,7 +3,8 @@
   "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_pediatric_coverage_by_country_clean.csv"},
   "title": {
     "text": "Density of % ART Received for Pediatric",
-  "fontSize": 16},
+  "fontSize": 16,
+  "font": "Lora"},
   "width":400,"height":500,
   "layer": [
     {

@@ -38,7 +38,8 @@
     {
       "title": {
         "text": "Trends Number of People Living with HIV",
-      "fontSize": 16},
+      "fontSize": 16,
+      "font": "Lora"},
       "width": 400, "height": 500,
       "mark": {"type": "area","stroke":"black"},
       "encoding": {
@@ -86,7 +87,8 @@
       "width":400, "height":500,
       "title": {
         "text": "Number of People Living with HIV",
-      "fontSize": 16},
+      "fontSize": 16,
+      "font": "Lora"},
       "mark": {
         "type": "boxplot",
         "extent": "min-max"

@@ -38,7 +38,8 @@
     {
       "title": {
         "text": "Trends Average of Death Cases",
-      "fontSize": 16},
+      "fontSize": 16,
+      "font": "Lora"},
       "width":420, "height": 500,
       "mark": {"type": "area","stroke":"black"},
       "encoding": {
@@ -85,7 +86,8 @@
     {
       "title": {
         "text": "Average of Death Cases for Each Continent",
-      "fontSize": 16},
+      "fontSize": 16,
+      "font": "Lora"},
       "width":450, "height":500,
       "mark": {
         "type": "boxplot",
