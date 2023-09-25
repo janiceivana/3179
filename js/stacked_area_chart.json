@@ -68,11 +68,11 @@
               "Western Pacific"
             ],
             "range": [
-              "pink",
-              "purple",
-              "blue",
-              "lightgreen",
-              "orange",
+              "#fb9a99",
+              "#fdbf6f",
+              "#cab2d6",
+              "#80b1d3",
+              "#ffed6f",
               "darkgreen"
             ]
           }
@@ -111,14 +111,14 @@
             "South-East Asia",
             "Western Pacific"
           ],
-          "range": [
-            "pink",
-            "purple",
-            "blue",
-            "lightgreen",
-            "orange",
-            "darkgreen"
-          ]
+            "range": [
+              "#fb9a99",
+              "#fdbf6f",
+              "#cab2d6",
+              "#80b1d3",
+              "#ffed6f",
+              "darkgreen"
+            ]
         }
       },
         "y": {

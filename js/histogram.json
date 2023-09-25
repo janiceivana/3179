@@ -1,34 +1,73 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_coverage_by_country_clean.csv"},
-  "width":400,"height":500,
-  "title": {
-    "text": "Density of % ART Received for People with HIV",
-  "fontSize": 16,
-  "font": "Lora"},
-  "layer": [
+  "data": {
+    "url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_coverage_by_country_clean.csv"
+  },
+  "vconcat": [
     {
-      "params": [
-        {
-          "name": "hover",
-          "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}
-        }
-      ],
-      "mark": {"type": "bar", "color": "#eee", "tooltip": true},
+      "title": {
+        "text": "Density of % ART Received for People with HIV",
+        "fontSize": 16,
+        "font": "Lora"
+      },
+      "width": 400,
+      "height": 250,
+      "mark": {
+        "type": "bar",
+        "tooltip": true,
+        "color": "#ad494a"
+      },
       "encoding": {
-        "x": {"bin": true, "field": "Estimated ART coverage among people living with HIV (%)_median", "title":"% ART Received for People with HIV"},
-        "opacity": {
-          "condition": {"test": {"param": "hover", "empty": false}, "value": 0.5},
-          "value": 0
+        "x": {
+          "field": "Estimated ART coverage among people living with HIV (%)_median",
+          "title": "% ART Received for People with HIV",
+          "bin": {
+            "maxbins": 30,
+            "extent": {
+              "param": "brush"
+            }
+          }
         },
-        "detail": [{"aggregate": "count"}]
+        "y": {
+          "aggregate": "count"
+        }
       }
     },
     {
-      "mark": {"type":"bar","color":"pink"},
+      "title": {
+        "text": "Use this as filter above histogram for detail",
+        "fontSize": 16,
+        "font": "Lora"
+      },
+      "width": 400,
+      "height": 250,
+      "params": [
+        {
+          "name": "brush",
+          "select": {
+            "type": "interval",
+            "encodings": [
+              "x"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "tooltip": true,
+        "color": "#ad494a"
+      },
       "encoding": {
-        "x": {"bin": true, "field": "Estimated ART coverage among people living with HIV (%)_median", "title":"% ART Received for People with HIV"},
-        "y": {"aggregate": "count"}
+        "x": {
+          "field": "Estimated ART coverage among people living with HIV (%)_median",
+          "title": "% ART Received for People with HIV",
+          "bin": {
+            "maxbins": 10
+          }
+        },
+        "y": {
+          "aggregate": "count"
+        }
       }
     }
   ]

@@ -29,7 +29,7 @@ vegaEmbed('#donut', spec6).then(function(result) {
 }).catch(console.error);
 
 var spec7 = "js/histogram.json";
-vegaEmbed('#hist', spec7).then(function(result) {
+vegaEmbed('#hist_total', spec7).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
@@ -47,8 +47,6 @@ var spec10 = "js/grouped_bar_chart.json";
 vegaEmbed('#grouped_bar', spec10).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
-
-
 
 
 var spec14 = "js/stacked_area_chart_adult_cases.json";
@@ -101,8 +99,6 @@ var spec27 = "js/histogram_pregnant.json";
 vegaEmbed('#hist_pregnant', spec27).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
-
-
 
 var spec29 = "js/bubble_chart_pregnant.json";
 vegaEmbed('#bubble_pregnant', spec29).then(function(result) {

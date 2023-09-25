@@ -31,7 +31,14 @@
             "title": "WHO Region",
             "sort": { "encoding": "y", "order":"descending"}
         },
-        "color": {"field":"WHO Region","scale":{"range":["pink","purple","blue","lightgreen","orange","darkgreen"]}},
+        "color": {"field":"WHO Region","scale":{            "range": [
+          "#fb9a99",
+          "#fdbf6f",
+          "#cab2d6",
+          "#80b1d3",
+          "#ffed6f",
+          "darkgreen"
+        ]}},
         "opacity": {
           "condition": {"param": "Continent", "value": 1},
           "value": 0.2

@@ -78,7 +78,9 @@ body {
 	margin-right: 30px;
 	font-size: 23px;
 	text-align: justify;
-	font-family: 'Lora', sans-serif;
+	/* font-family: 'Lora', sans-serif; */
+	font-family: 'Inclusive Sans', sans-serif;
+	/* font-family: 'Source Sans Pro', sans-serif; */
 }
 
 .vis-mark{

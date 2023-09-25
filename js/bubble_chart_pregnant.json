@@ -5,7 +5,7 @@
   },
   "width": "container",
   "title": {
-    "text": "Correlation Living with HIV and Received ART",
+    "text": "Correlation Pediatric with HIV and Received ART",
   "fontSize": 16,
   "font": "Lora"},
   "height": 500,
@@ -121,11 +121,11 @@
               "Western Pacific"
             ],
             "range": [
-              "pink",
-              "purple",
-              "blue",
-              "lightgreen",
-              "orange",
+              "#fb9a99",
+              "#fdbf6f",
+              "#cab2d6",
+              "#80b1d3",
+              "#ffed6f",
               "darkgreen"
             ]
           }

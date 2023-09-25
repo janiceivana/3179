@@ -57,7 +57,7 @@
         "type": "bar",
         "size": 20,
         "xOffset": 15,
-        "color": "orange",
+        "color": "#e7969c",
         "tooltip": true
       }
     },
@@ -74,7 +74,7 @@
         "type": "bar",
         "xOffset": -15,
         "size": 20,
-        "color": "pink",
+        "color": "#d6616b",
         "tooltip":true
       }
     }
