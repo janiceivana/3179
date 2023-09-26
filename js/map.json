@@ -136,14 +136,21 @@
         "color": {
           "field": "Death Cases",
           "type": "quantitative",
-          "scale": {"type": "log","range": [
+          "scale": {"type": "log",
+          "domain": [
+            1,
+            100,
+            10000,
+            1000000
+        ],
+        "range": [
             "#fdbe85",
             "#F48C06",
             "#D00000",
-            "#9D0208",
-            "#6A040F"
+            "#9D0208"
         ]}
         },
+        
         "strokeWidth": {
           "condition": [
             {

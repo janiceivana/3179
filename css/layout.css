@@ -1,8 +1,10 @@
 
 
 p {
-    color: #0b0b0b7a;
+    /* color: #0b0b0b7a; */
+	color: black;
     font-size: 16px;
+	
 }
 
 body {
@@ -57,20 +59,25 @@ body {
 .intro-paragraph {
 	margin-right: 5%;
 	/* font-family: 'Source Sans Pro', sans-serif; */
-	font-family: 'Lora', sans-serif;
+	/* font-family: 'Lora', sans-serif; */
+	font-family: 'Inclusive Sans', sans-serif;
 	font-size: 25px;
 	margin-left: 5%;
 	text-align: justify;
 }
 
 .sub-title {
-	font-family: 'Inclusive Sans', sans-serif;
+	/* font-family: 'Inclusive Sans', sans-serif; */
+	font-family: 'Lora', sans-serif;
 	font-weight: bold;
 	font-size: 45px;
 	margin-top: 50px;
 	margin-left: 30px;
 	margin-right: 30px;
 	margin-bottom: 5px;
+	text-align: center;
+	color: #d81c1ce4;
+	border: 2px solid #000;
 }
 
 .paragraph {
@@ -85,14 +92,28 @@ body {
 
 .vis-mark{
 	margin-right: 20%;
-	font-family: 'Inclusive Sans', sans-serif;
+	/* font-family: 'Inclusive Sans', sans-serif; */
+	font-family: 'Lora', sans-serif;
 	font-size: 25px;
 }
 
 h1 {
 	font-weight: 900;
 	font-size: 80px;
-	font-family: 'Inclusive Sans', serif;
+	/* font-family: 'Inclusive Sans', serif; */
+	font-family: 'Lora', sans-serif;
     text-align: center;
+	font-weight: bold;
     color: #d81c1ce4;
 }
+
+.bordered-paragraph {
+	margin-left: 30px;
+	margin-right: 30px;
+	font-size: 23px;
+	text-align: justify;
+	/* font-family: 'Lora', sans-serif; */
+	font-family: 'Inclusive Sans', sans-serif;
+	/* font-family: 'Source Sans Pro', sans-serif; */
+    border: 2px solid #000; 
+  }

@@ -5,7 +5,7 @@
   },
   "width": "container",
   "title": {
-    "text": "Correlation Pediatric with HIV and Received ART",
+    "text": "Correlation Pregnant Women and Received ART",
   "fontSize": 16,
   "font": "Lora"},
   "height": 500,
@@ -54,7 +54,7 @@
           "South-East Asia",
           "Western Pacific"
         ],
-        "name": "Continent Selection: "
+        "name": "WHO Region: "
       }
     }
   ],
