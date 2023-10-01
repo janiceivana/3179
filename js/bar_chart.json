@@ -5,22 +5,11 @@
     "data": {
         "url": "https://raw.githubusercontent.com/janiceivana/3179/main/no_of_deaths_by_country_clean.csv"
     },
-    "params": [{
-        "name": "Continent",
-        "select": {"type": "point", "fields": ["WHO Region"]},
-        "bind": "legend"
-      }],
     "title": {
         "text": "Distribution Number of Death caused by HIV",
         "fontSize": 16,
         "font": "Lora"
     },
-    "mark": {
-        "type": "bar",
-        "filled": true,
-        "tooltip": true
-    },
-    
     "encoding": {
         "y": {
             "field": "Count_median",
@@ -36,26 +25,72 @@
                 "encoding": "y",
                 "order": "descending"
             }
-        },
-        "color": {
-            "field": "WHO Region",
-            "scale": {
-                            "range": [
-              "#fb9a99",
-              "#fdbf6f",
-              "#cab2d6",
-              "#80b1d3",
-              "#ffed6f",
-              "darkgreen"
-            ]
-            }
-        },
-        "opacity": {
-            "condition": {
-                "param": "Continent",
-                "value": 1
-            },
-            "value": 0.2
         }
-    }
+    },
+        "layer":[
+        
+            {
+                
+                    "params": [{
+                      "name": "Continent",
+                      "select": {"type": "point", "fields": ["WHO Region"]},
+                      "bind": "legend"
+                    }],
+                    "mark": {
+                      "type": "bar",
+                      "filled": true,
+                      "tooltip":true
+                    },
+                    "encoding":{"color": {"field":"WHO Region","scale":{            "range": [
+                          "#fb9a99",
+                          "#fdbf6f",
+                          "#cab2d6",
+                          "#80b1d3",
+                          "#ffed6f",
+                          "darkgreen"
+                        ]}},
+                        "opacity": {
+                          "condition": {"param": "Continent", "value": 1},
+                          "value": 0.2
+                        }
+                  }
+            },
+        {
+            
+                "params": [{
+                  "name": "Continent_text",
+                  "select": {"type": "point", "fields": ["WHO Region"]},
+                  "bind": "legend"
+                }],
+                "mark": {
+                  "type": "text",
+                  "align": "left",
+                  "baseline": "middle",
+                  "fontSize":14,
+                  "fontWeight":"bold",
+                  "dy": -5,
+                  "angle":-10
+                },
+                "encoding": {"color": {"field":"WHO Region","scale":{            "range": [
+                  "#fb9a99",
+                  "#fdbf6f",
+                  "#cab2d6",
+                  "#80b1d3",
+                  "#ffed6f",
+                  "darkgreen"
+                ]}},
+                "opacity": {
+                  "condition": {"param": "Continent_text", "value": 1},
+                  "value": 0.2
+                },
+                  "text": {"field": "Count_median",
+                  "type": "quantitative",
+                  "aggregate":"sum"}
+                  }
+              
+              }
+        
+        ]
 }
+
+
