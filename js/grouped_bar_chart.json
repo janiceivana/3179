@@ -50,8 +50,25 @@
       "encoding": {
         "y": {
           "field": "Reported number of people receiving ART",
-          "type": "quantitative"
-        }
+          "type": "quantitative",
+          "aggregate": "sum",
+          "title":"Number of People"
+        },
+        "tooltip": [
+          {
+            "field": "Reported number of people receiving ART",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "WHO Region",
+            "type": "nominal"
+          },
+          {
+            "field": "Country",
+            "type": "nominal"
+          }
+        ]
       },
       "mark": {
         "type": "bar",
@@ -68,7 +85,22 @@
           "type": "quantitative",
           "aggregate": "sum",
           "title":"Number of People"
-        }
+        },
+        "tooltip": [
+          {
+            "field": "Estimated number of people living with HIV_median",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "WHO Region",
+            "type": "nominal"
+          },
+          {
+            "field": "Country",
+            "type": "nominal"
+          }
+        ]
       },
       "mark": {
         "type": "bar",

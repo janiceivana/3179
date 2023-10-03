@@ -50,8 +50,25 @@
       "encoding": {
         "y": {
           "field": "Reported number of children receiving ART",
-          "type": "quantitative"
-        }
+          "type": "quantitative",
+          "aggregate": "sum",
+          "title":"Number of Children"
+        },
+        "tooltip": [
+          {
+            "field": "Reported number of children receiving ART",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "WHO Region",
+            "type": "nominal"
+          },
+          {
+            "field": "Country",
+            "type": "nominal"
+          }
+        ]
       },
       "mark": {
         "type": "bar",
@@ -67,8 +84,23 @@
           "field": "Estimated number of children needing ART based on WHO methods_median",
           "type": "quantitative",
           "aggregate": "sum",
-          "title":"Number of People"
-        }
+          "title":"Number of Children"
+        },
+        "tooltip": [
+          {
+            "field": "Estimated number of children needing ART based on WHO methods_median",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "WHO Region",
+            "type": "nominal"
+          },
+          {
+            "field": "Country",
+            "type": "nominal"
+          }
+        ]
       },
       "mark": {
         "type": "bar",

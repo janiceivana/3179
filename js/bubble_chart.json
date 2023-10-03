@@ -133,7 +133,8 @@
         "tooltip": [
           {
             "field": "Reported number of people receiving ART",
-            "type": "quantitative"
+            "type": "quantitative",
+            "format": ","
           },
           {
             "field": "Estimated number of people living with HIV_median",
@@ -193,7 +194,8 @@
         "tooltip": [
           {
             "field": "Reported number of people receiving ART",
-            "type": "quantitative"
+            "type": "quantitative",
+            "format": ","
           },
           {
             "field": "Estimated number of people living with HIV_median",

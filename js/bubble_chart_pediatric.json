@@ -134,7 +134,8 @@
         "tooltip": [
           {
             "field": "Reported number of children receiving ART",
-            "type": "quantitative"
+            "type": "quantitative",
+            "format": ","
           },
           {
             "field": "Estimated number of children needing ART based on WHO methods_median",
@@ -194,7 +195,8 @@
         "tooltip": [
           {
             "field": "Reported number of children receiving ART",
-            "type": "quantitative"
+            "type": "quantitative",
+            "format": ","
           },
           {
             "field": "Estimated number of children needing ART based on WHO methods_median",

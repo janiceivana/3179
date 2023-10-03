@@ -56,7 +56,8 @@
                 "type": "quantitative",
                 "field": "Count_median",        
             "aggregate":"sum",
-            "title":"Number of People Living with HIV"
+            "title":"Number of People Living with HIV",
+            "format": ","
               }
             ]
           }
@@ -86,10 +87,11 @@
         ]}},
         "opacity": {
           "condition": {"param": "Continent_text", "value": 1},
-          "value": 0.2
+          "value": 0
         },
           "text": {"field": "Count_median",
           "type": "quantitative",
+          "format": ",",
           "aggregate":"sum"}
           }
       

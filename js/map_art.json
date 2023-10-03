@@ -116,14 +116,14 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/janiceivana/3179/main/no_of_deaths_by_country_clean.csv"
+              "url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_coverage_by_country_clean.csv"
             },
             "key": "Country",
-            "fields": ["Count_median"]
+            "fields": ["Reported number of people receiving ART"]
           }
         },
         
-        {"calculate": "datum.Count_median + 0.1", "as": "Death Cases"}
+        {"calculate": "datum['Reported number of people receiving ART'] + 0.1", "as": "Death Cases"}
       ],
       "mark": {
         "type": "geoshape",
@@ -166,7 +166,7 @@
             "title": "Country"
           },
           {
-            "field": "Count_median",
+            "field": "Reported number of people receiving ART",
             "type": "quantitative",
             "format": ","
           }

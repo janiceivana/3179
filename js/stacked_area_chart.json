@@ -44,7 +44,7 @@
       "fontSize": 16,
       "font": "Lora"},
       "width": 400, "height": 500,
-      "mark": {"type": "area","stroke":"black"},
+      "mark": {"type": "area"},
       "encoding": {
         "x": {
           "field": "Year",
@@ -82,8 +82,9 @@
       "tooltip": [
         {"field": "Year","timeUnit":"year"},
         {"field": "WHO Region"},
-        {"aggregate":"sum","field": "Count_median", "type": "quantitative"}
-      ]
+        {"aggregate":"sum","field": "Count_median", "type": "quantitative","format": ","}
+        ]
+      
     }
   },
   {
@@ -95,7 +96,8 @@
     "font": "Lora"},
     "mark": {
       "type": "boxplot",
-      "extent": "min-max"
+      "extent": "min-max",
+      "size": 30
     },
     "encoding": {
       "x": {"field": "WHO Region", "type": "nominal"},
@@ -128,7 +130,11 @@
         "scale": {"zero": false},
         "aggregate":"sum",
         "title":"Number of Death caused by HIV"
-      }
+      },
+      
+        "tooltip": [
+          {"format": ","}
+        ]
     }
   }
   ]

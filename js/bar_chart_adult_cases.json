@@ -4,7 +4,7 @@
     "height": 500,
     "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/no_of_cases_adults_15_to_49_by_country_clean.csv"},
       "title": {
-        "text": "Distribution Average of Death Cases (Bar Chart)",
+        "text": "Distribution Average of Death Cases",
       "fontSize": 16,
       "font": "Lora"},
     "encoding": {
@@ -84,7 +84,7 @@
     ]}},
     "opacity": {
       "condition": {"param": "Continent_text", "value": 1},
-      "value": 0.2
+      "value": 0
     },
       "text": {"field": "Count_median",
       "type": "quantitative",

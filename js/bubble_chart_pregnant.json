@@ -134,7 +134,8 @@
         "tooltip": [
           {
             "field": "Received Antiretrovirals",
-            "type": "quantitative"
+            "type": "quantitative",
+            "format": ","
           },
           {
             "field": "Needing antiretrovirals_median",
@@ -194,7 +195,8 @@
         "tooltip": [
           {
             "field": "Received Antiretrovirals",
-            "type": "quantitative"
+            "type": "quantitative",
+            "format": ","
           },
           {
             "field": "Needing antiretrovirals_median",
