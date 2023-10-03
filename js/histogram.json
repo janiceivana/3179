@@ -42,7 +42,7 @@
         "fontSize": 16,
         "font": "Lora"
       },
-      "width": 400,
+      "width": "container",
       "height": 250,
       "mark": {
         "type": "bar",
@@ -71,7 +71,7 @@
         "fontSize": 16,
         "font": "Lora"
       },
-      "width": 400,
+      "width": "container",
       "height": 250,
       "params": [
         {

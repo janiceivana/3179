@@ -101,7 +101,7 @@
       }
     },
     {
-      "width": 400,
+      "width": 420,
       "height": 500,
       "title": {
         "text": "Number of Death caused by HIV",
@@ -207,7 +207,7 @@
         "fontSize": 16,
         "font": "Lora"
       },
-      "width": 400,
+      "width": 420,
       "height": 500,
       "encoding": {
         "y": {
