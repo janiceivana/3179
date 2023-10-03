@@ -47,8 +47,9 @@
       "mark": {"type": "area","stroke":"black"},
       "encoding": {
         "x": {
-          "field": "Year"
-        },
+          "field": "Year",
+          "timeUnit":"year",
+        "axis":{"title":"Year"}  },
         "y": {
           "aggregate": "sum", 
           "field": "Count_median",
@@ -79,7 +80,7 @@
       },
     
       "tooltip": [
-        {"field": "Year"},
+        {"field": "Year","timeUnit":"year"},
         {"field": "WHO Region"},
         {"aggregate":"sum","field": "Count_median", "type": "quantitative"}
       ]
