@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/janiceivana/3179/main/no_of_deaths_by_country_clean.csv"},
-  
+  "data": {
+    "url": "https://raw.githubusercontent.com/janiceivana/3179/main/no_of_deaths_by_country_clean.csv"
+  },
   "params": [
     {
       "name": "Continent",
@@ -33,28 +34,32 @@
     {
       "filter": "Continent == null || datum['WHO Region'] == Continent"
     }
-  ],
-  "config": {
-    "legend": {"orient": "left"}
-  },
-  "hconcat":[
+  ]
+  ,
+  "hconcat": [
     {
       "title": {
         "text": "Trends Number of Death caused by HIV",
-      "fontSize": 16,
-      "font": "Lora"},
-      "width": 400, "height": 500,
-      "mark": {"type": "area"},
+        "fontSize": 16,
+        "font": "Lora"
+      },
+      "width": 400,
+      "height": 500,
+      "mark": {
+        "type": "area"
+      },
       "encoding": {
         "x": {
           "field": "Year",
-          "timeUnit":"year",
-        "axis":{"title":"Year"}  },
+          "timeUnit": "year",
+          "scale":{"domain":[2000,2018]},
+           "axis":{"title":"Year","tickCount":5}
+        },
         "y": {
-          "aggregate": "sum", 
+          "aggregate": "sum",
           "field": "Count_median",
-          "sort":"color",
-          "title":"Number of Death caused by HIV"
+          "sort": "color",
+          "title": "Number of Death caused by HIV"
         },
         "color": {
           "field": "WHO Region",
@@ -77,68 +82,219 @@
               "darkgreen"
             ]
           }
-      },
-    
-      "tooltip": [
-        {"field": "Year","timeUnit":"year"},
-        {"field": "WHO Region"},
-        {"aggregate":"sum","field": "Count_median", "type": "quantitative","format": ","}
+        },
+        "tooltip": [
+          {
+            "field": "Year",
+            "timeUnit": "year"
+          },
+          {
+            "field": "WHO Region"
+          },
+          {
+            "aggregate": "sum",
+            "field": "Count_median",
+            "type": "quantitative",
+            "format": ","
+          }
         ]
-      
-    }
-  },
-  {
-    
-    "width":400, "height":500,
-    "title": {
-      "text": "Number of Death caused by HIV",
-    "fontSize": 16,
-    "font": "Lora"},
-    "mark": {
-      "type": "boxplot",
-      "extent": "min-max",
-      "size": 30
+      }
     },
-    "encoding": {
-      "x": {"field": "WHO Region", "type": "nominal"},
-      "color": {
-        "field": "WHO Region",
-        "type": "nominal",
-        "legend": null,
-        "scale": {
-          "domain": [
-            "Africa",
-            "Americas",
-            "Eastern Mediterranean",
-            "Europe",
-            "South-East Asia",
-            "Western Pacific"
-          ],
-            "range": [
-              "#fb9a99",
-              "#fdbf6f",
-              "#cab2d6",
-              "#80b1d3",
-              "#ffed6f",
-              "darkgreen"
-            ]
+    {
+      "width": 400,
+      "height": 500,
+      "title": {
+        "text": "Number of Death caused by HIV",
+        "fontSize": 16,
+        "font": "Lora"
+      },
+      "layer": [
+        {"mark": {
+          "type": "boxplot",
+          "extent": "min-max",
+          "size": 30
+        },
+        "encoding": {
+          "x": {
+            "field": "WHO Region",
+            "type": "nominal"
+          },
+          "color": {
+            "field": "WHO Region",
+            "type": "nominal",
+            "legend": null,
+            "scale": {
+              "domain": [
+                "Africa",
+                "Americas",
+                "Eastern Mediterranean",
+                "Europe",
+                "South-East Asia",
+                "Western Pacific"
+              ],
+              "range": [
+                "#fb9a99",
+                "#fdbf6f",
+                "#cab2d6",
+                "#80b1d3",
+                "#ffed6f",
+                "darkgreen"
+              ]
+            }
+          },
+          "y": {
+            "field": "Count_median",
+            "type": "quantitative",
+            "scale": {
+              "zero": false
+            },
+            "title": "Number of Death caused by HIV"
+          }
+        }},
+        {
+          
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "fontSize": 14,
+            "fontWeight": "bold",
+            "dy": -5,
+            "angle": -10
+          },
+          "encoding": {
+            "x": {
+              "field": "WHO Region",
+              "type": "nominal"
+            },
+            "y": {
+              "field": "Count_median",
+              "type": "quantitative",
+              "scale": {
+                "zero": false
+              },
+              "aggregate":"max"
+            },
+            "color": {
+              "field": "WHO Region",
+              "scale": {
+                "range": [
+                  "#fb9a99",
+                  "#fdbf6f",
+                  "#cab2d6",
+                  "#80b1d3",
+                  "#ffed6f",
+                  "darkgreen"
+                ]
+              }
+            },
+            "text": {
+              "field": "Count_median",
+              "type": "quantitative",
+              "format": ",",
+              "aggregate":"max"
+            }
+          }
+        
+      }
+        
+      ]
+      
+    },
+    {
+      "title": {
+        "text": "Distribution Number of Death caused by HIV",
+        "fontSize": 16,
+        "font": "Lora"
+      },
+      "width": 400,
+      "height": 500,
+      "encoding": {
+        "y": {
+          "field": "Count_median",
+          "type": "quantitative",
+          "aggregate": "sum",
+          "title": "Count"
+        },
+        "x": {
+          "field": "WHO Region",
+          "type": "nominal",
+          "title": "WHO Region",
+          "sort": {
+            "encoding": "y",
+            "order": "descending"
+          }
         }
       },
-        "y": {
-        "field": "Count_median",
-        "type": "quantitative",
-        "scale": {"zero": false},
-        "aggregate":"sum",
-        "title":"Number of Death caused by HIV"
-      },
-      
-        "tooltip": [
-          {"format": ","}
-        ]
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "filled": true,
+            "tooltip": true
+          },
+          "encoding": {
+            "color": {
+              "field": "WHO Region",
+              "scale": {
+                "range": [
+                  "#fb9a99",
+                  "#fdbf6f",
+                  "#cab2d6",
+                  "#80b1d3",
+                  "#ffed6f",
+                  "darkgreen"
+                ]
+              }
+            },
+            "tooltip": [
+              {
+                "field": "WHO Region",
+                "type": "nominal"
+              },
+              {
+                "type": "quantitative",
+                "field": "Count_median",
+                "aggregate": "sum",
+                "title": "Number of Death Cases by HIV",
+                "format": ","
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "fontSize": 14,
+            "fontWeight": "bold",
+            "dy": -5,
+            "angle": -10
+          },
+          "encoding": {
+            "color": {
+              "field": "WHO Region",
+              "scale": {
+                "range": [
+                  "#fb9a99",
+                  "#fdbf6f",
+                  "#cab2d6",
+                  "#80b1d3",
+                  "#ffed6f",
+                  "darkgreen"
+                ]
+              }
+            },
+            "text": {
+              "field": "Count_median",
+              "type": "quantitative",
+              "format": ",",
+              "aggregate": "sum"
+            }
+          }
+        }
+      ]
     }
-  }
   ]
-  
-  
 }
-

@@ -46,7 +46,8 @@
         "x": {
           "field": "Year",
           "timeUnit":"year",
-        "axis":{"title":"Year"}  },
+          "scale":{"domain":[2000,2018]},
+          "axis":{"title":"Year","tickCount":5}},
         "y": {
           "aggregate": "average", 
           "field": "Count_median",
@@ -90,43 +91,169 @@
       "fontSize": 16,
       "font": "Lora"},
       "width":450, "height":500,
-      "mark": {
-        "type": "boxplot",
-        "extent": "min-max",
-        "size": 30
-      },
-      "encoding": {
-        "x": {"field": "WHO Region", "type": "nominal"},
-        "color": {
-          "field": "WHO Region",
-          "type": "nominal",
-          "legend": null,
-          "scale": {
-            "domain": [
-              "Africa",
-              "Americas",
-              "Eastern Mediterranean",
-              "Europe",
-              "South-East Asia",
-              "Western Pacific"
-            ],
-            "range": [
-              "#fb9a99",
-              "#fdbf6f",
-              "#cab2d6",
-              "#80b1d3",
-              "#ffed6f",
-              "darkgreen"
-            ]
+      "layer": [
+        {"mark": {
+          "type": "boxplot",
+          "extent": "min-max",
+          "size": 30
+        },
+        "encoding": {
+          "x": {"field": "WHO Region", "type": "nominal"},
+          "color": {
+            "field": "WHO Region",
+            "type": "nominal",
+            "legend": null,
+            "scale": {
+              "domain": [
+                "Africa",
+                "Americas",
+                "Eastern Mediterranean",
+                "Europe",
+                "South-East Asia",
+                "Western Pacific"
+              ],
+              "range": [
+                "#fb9a99",
+                "#fdbf6f",
+                "#cab2d6",
+                "#80b1d3",
+                "#ffed6f",
+                "darkgreen"
+              ]
+            }
+            },
+            "y": {
+            "field": "Count_median",
+            "type": "quantitative",
+            "scale": {"zero": false},
+            "title":"Average of Adult Cases with HIV (%)"
           }
+        }},
+        {
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "baseline": "middle",
+            "fontSize": 14,
+            "fontWeight": "bold",
+            "dy": -5
           },
-          "y": {
-          "field": "Count_median",
-          "type": "quantitative",
-          "scale": {"zero": false},
-          "title":"Average of Adult Cases with HIV (%)"
+          "encoding": {
+            "x": {
+              "field": "WHO Region",
+              "type": "nominal"
+            },
+            "y": {
+              "field": "Count_median",
+              "type": "quantitative",
+              "scale": {
+                "zero": false
+              },
+              "aggregate":"max"
+            },
+            "color": {
+              "field": "WHO Region",
+              "scale": {
+                "range": [
+                  "#fb9a99",
+                  "#fdbf6f",
+                  "#cab2d6",
+                  "#80b1d3",
+                  "#ffed6f",
+                  "darkgreen"
+                ]
+              }
+            },
+            "text": {
+              "field": "Count_median",
+              "type": "quantitative",
+              "format": ",",
+              "aggregate":"max"
+            }
+          }
         }
+      ]
+    },
+    {
+      "title": {
+        "text": "Distribution Average of Death Cases",
+      "fontSize": 16,
+      "font": "Lora"},
+      "width":400, "height":500,
+
+    "encoding": {
+        "y": {
+            "field": "Count_median",
+            "type": "quantitative",
+            "aggregate":"average",
+            "title":"Average of Adult Cases with HIV (%)"
+        },
+        "x": {
+            "field": "WHO Region",
+            "type": "nominal",
+            "title": "WHO Region",
+            "sort": { "encoding": "y", "order":"descending"}
+        }
+},
+"layer": [
+  {
+  
+    "mark": {
+      "type": "bar",
+      "filled": true,
+      "tooltip":true
+    },
+    "encoding":{"color": {"field":"WHO Region","scale":{            "range": [
+          "#fb9a99",
+          "#fdbf6f",
+          "#cab2d6",
+          "#80b1d3",
+          "#ffed6f",
+          "darkgreen"
+        ]}},
+       
+        "tooltip":[
+          {
+            "field": "WHO Region",
+            "type": "nominal"
+          },
+          {
+            "type": "quantitative",
+            "aggregate": "average",
+            "field": "Count_median",
+            "title": "Average of Adult Cases with HIV (%)",
+            "format":".2f"
+          }
+        ]
       }
+  },
+  {
+  
+    "mark": {
+      "type": "text",
+      "align": "center",
+      "baseline": "middle",
+      "fontSize":14,
+      "fontWeight":"bold",
+      "dy": -5
+    },
+    "encoding": {"color": {"field":"WHO Region","scale":{            "range": [
+      "#fb9a99",
+      "#fdbf6f",
+      "#cab2d6",
+      "#80b1d3",
+      "#ffed6f",
+      "darkgreen"
+    ]}},
+  
+      "text": {"field": "Count_median",
+      "type": "quantitative",
+      "aggregate":"average",
+      "format":".2f"}
+      }
+    }
+  
+]
     }
   ]
   

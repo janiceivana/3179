@@ -63,10 +63,6 @@
           {
             "field": "WHO Region",
             "type": "nominal"
-          },
-          {
-            "field": "Country",
-            "type": "nominal"
           }
         ]
       },
@@ -94,10 +90,6 @@
           },
           {
             "field": "WHO Region",
-            "type": "nominal"
-          },
-          {
-            "field": "Country",
             "type": "nominal"
           }
         ]

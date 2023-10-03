@@ -45,72 +45,69 @@
       "filter": "Continent_selection == null || datum['WHO Region'] == Continent_selection"
     }
   ],
-  "layer": [
-    {
-      "encoding": {
-        "y": {
-          "field": "Reported number of people receiving ART",
-          "type": "quantitative",
-          "aggregate": "sum",
-          "title":"Number of People"
-        },
-        "tooltip": [
+  "layer":[
+      {
+        "layer": [
           {
-            "field": "Reported number of people receiving ART",
-            "type": "quantitative",
-            "format": ","
+            "encoding": {
+              "y": {
+                "field": "Reported number of people receiving ART",
+                "type": "quantitative",
+                "aggregate": "sum",
+                "title":"Number of People"
+              },
+              "tooltip": [
+                {
+                  "field": "Reported number of people receiving ART",
+                  "type": "quantitative",
+                  "format": ","
+                },
+                {
+                  "field": "WHO Region",
+                  "type": "nominal"
+                }
+              ]
+            },
+            "mark": {
+              "type": "bar",
+              "size": 20,
+              "xOffset": 15,
+              "color": "#e7969c",
+              "tooltip": true
+            }
           },
           {
-            "field": "WHO Region",
-            "type": "nominal"
-          },
-          {
-            "field": "Country",
-            "type": "nominal"
+            "encoding": {
+              "y": {
+                "field": "Estimated number of people living with HIV_median",
+                "type": "quantitative",
+                "aggregate": "sum",
+                "title":"Number of People"
+              },
+              "tooltip": [
+                {
+                  "field": "Estimated number of people living with HIV_median",
+                  "type": "quantitative",
+                  "format": ","
+                },
+                {
+                  "field": "WHO Region",
+                  "type": "nominal"
+                }
+              ]
+            },
+            "mark": {
+              "type": "bar",
+              "xOffset": -15,
+              "size": 20,
+              "color": "#d6616b",
+              "tooltip":true
+            }
           }
         ]
-      },
-      "mark": {
-        "type": "bar",
-        "size": 20,
-        "xOffset": 15,
-        "color": "#e7969c",
-        "tooltip": true
       }
-    },
-    {
-      "encoding": {
-        "y": {
-          "field": "Estimated number of people living with HIV_median",
-          "type": "quantitative",
-          "aggregate": "sum",
-          "title":"Number of People"
-        },
-        "tooltip": [
-          {
-            "field": "Estimated number of people living with HIV_median",
-            "type": "quantitative",
-            "format": ","
-          },
-          {
-            "field": "WHO Region",
-            "type": "nominal"
-          },
-          {
-            "field": "Country",
-            "type": "nominal"
-          }
-        ]
-      },
-      "mark": {
-        "type": "bar",
-        "xOffset": -15,
-        "size": 20,
-        "color": "#d6616b",
-        "tooltip":true
-      }
-    }
   ]
+  
 }
 
 
