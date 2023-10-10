@@ -43,7 +43,7 @@
         "font": "Lora"
       },
       "width": "container",
-      "height": 250,
+      "height": 285,
       "mark": {
         "type": "bar",
         "tooltip": true,
@@ -72,7 +72,7 @@
         "font": "Lora"
       },
       "width": "container",
-      "height": 250,
+      "height": 285,
       "params": [
         {
           "name": "brush",
@@ -92,7 +92,7 @@
       "encoding": {
         "x": {
           "field": "Estimated ART coverage among people living with HIV (%)_median",
-          "title": "% ART Received for People with HIV",
+          "title": "% ART Received",
           "bin": {
             "maxbins": 10
           }

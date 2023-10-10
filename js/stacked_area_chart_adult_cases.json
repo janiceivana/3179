@@ -47,12 +47,12 @@
           "field": "Year",
           "timeUnit":"year",
           "scale":{"domain":[2000,2018]},
-          "axis":{"title":"Year","tickCount":5}},
+          "axis":{"title":"Year","tickCount":5,"grid": false, "ticks": false}},
         "y": {
           "aggregate": "average", 
           "field": "Count_median",
           "sort":"color",
-          "title":"Average of Adult Cases with HIV (%)"
+          "title":"Average of Adult Cases (%)", "axis": {"grid": false, "ticks": false}
         },
         "color": {
           "field": "WHO Region",
@@ -78,9 +78,9 @@
           }
           },
         "tooltip": [
-          {"field": "Year","timeUnit":"year"},
+          {"field": "Year","timeUnit":"year","title":"Year"},
           {"field": "WHO Region"},
-          {"aggregate":"average","field": "Count_median", "type": "quantitative","format": ".2f"}
+          {"aggregate":"average","field": "Count_median", "type": "quantitative","format": ".2f","title":"Average of Adult Cases (%)"}
         ]
       }
     
@@ -125,8 +125,9 @@
             "y": {
             "field": "Count_median",
             "type": "quantitative",
-            "scale": {"zero": false},
-            "title":"Average of Adult Cases with HIV (%)"
+            "title":"Average Adult Cases",
+            "scale": {"type": "log"},
+            "axis": {"grid": false, "ticks": false}
           }
         }},
         {
@@ -186,6 +187,8 @@
             "field": "Count_median",
             "type": "quantitative",
             "aggregate":"average",
+            "scale": {"type": "log"},
+            "axis": {"grid": false, "ticks": false},
             "title":"Average of Adult Cases with HIV (%)"
         },
         "x": {
@@ -221,7 +224,7 @@
             "type": "quantitative",
             "aggregate": "average",
             "field": "Count_median",
-            "title": "Average of Adult Cases with HIV (%)",
+            "title": "Average of Adult Cases (%)",
             "format":".2f"
           }
         ]

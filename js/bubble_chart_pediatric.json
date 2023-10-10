@@ -202,12 +202,14 @@
           {
             "field": "Reported number of children receiving ART",
             "type": "quantitative",
-            "format": ","
+            "format": ",",
+            "title": "Received ART"
           },
           {
             "field": "Estimated number of children needing ART based on WHO methods_median",
             "type": "quantitative",
-            "format": ","
+            "format": ",",
+            "title": "Needing ART"
           },
           {
             "field": "WHO Region",
@@ -220,7 +222,8 @@
           {
             "field": "Estimated ART coverage among children (%)_median",
             "type": "quantitative",
-            "format": ","
+            "format": ",",
+            "title": "% ART Coverage"
           }
         ]
       }

@@ -200,12 +200,14 @@
           {
             "field": "Reported number of people receiving ART",
             "type": "quantitative",
-            "format": ","
+            "format": ",",
+            "title": "Received ART"
           },
           {
             "field": "Estimated number of people living with HIV_median",
             "type": "quantitative",
-            "format": ","
+            "format": ",",
+            "title": "Number of Cases"
           },
           {
             "field": "WHO Region",
@@ -218,7 +220,8 @@
           {
             "field": "Estimated ART coverage among people living with HIV (%)_median",
             "type": "quantitative",
-            "format": ","
+            "format": ",",
+            "title": "% ART Coverage"
           }
         ]
       }

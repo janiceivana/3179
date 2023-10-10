@@ -3,7 +3,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/janiceivana/3179/main/art_pediatric_coverage_by_country_clean.csv"
   },
-  "width":"container","height":500,
+  "width":"container","height":550,
   "title": {
     "text": "Pediatric with HIV vs Received ART",
   "fontSize": 16,
@@ -58,7 +58,8 @@
           {
             "field": "Reported number of children receiving ART",
             "type": "quantitative",
-            "format": ","
+            "format": ",",
+            "title":"Received ART"
           },
           {
             "field": "WHO Region",
@@ -86,7 +87,8 @@
           {
             "field": "Estimated number of children needing ART based on WHO methods_median",
             "type": "quantitative",
-            "format": ","
+            "format": ",",
+            "title":"Needing ART"
           },
           {
             "field": "WHO Region",

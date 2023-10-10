@@ -53,13 +53,14 @@
           "field": "Year",
           "timeUnit": "year",
           "scale":{"domain":[2000,2018]},
-           "axis":{"title":"Year","tickCount":5}
+           "axis":{"title":"Year","tickCount":5,"grid": false, "ticks": false}
         },
         "y": {
           "aggregate": "sum",
           "field": "Count_median",
           "sort": "color",
-          "title": "Number of Death caused by HIV"
+          "title": "Number of Death caused by HIV",
+          "axis": {"grid": false, "ticks": false}
         },
         "color": {
           "field": "WHO Region",
@@ -95,6 +96,7 @@
             "aggregate": "sum",
             "field": "Count_median",
             "type": "quantitative",
+            "title":"Number of Death",
             "format": ","
           }
         ]
@@ -145,10 +147,9 @@
           "y": {
             "field": "Count_median",
             "type": "quantitative",
-            "scale": {
-              "zero": false
-            },
-            "title": "Number of Death caused by HIV"
+            "scale": {"type": "log"},
+            "axis": {"grid": false, "ticks": false},
+            "title": "Number of Death"
           }
         }},
         {
@@ -214,7 +215,9 @@
           "field": "Count_median",
           "type": "quantitative",
           "aggregate": "sum",
-          "title": "Count"
+          "scale": {"type": "log"},
+          "axis": {"grid": false, "ticks": false},
+          "title": "Number of Death caused by HIV"
         },
         "x": {
           "field": "WHO Region",
@@ -256,7 +259,7 @@
                 "type": "quantitative",
                 "field": "Count_median",
                 "aggregate": "sum",
-                "title": "Number of Death Cases by HIV",
+                "title": "Number of Death",
                 "format": ","
               }
             ]

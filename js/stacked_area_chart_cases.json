@@ -47,12 +47,13 @@
           "field": "Year",
           "timeUnit":"year",
           "scale":{"domain":[2000,2018]},
-        "axis":{"title":"Year","tickCount":5}},
+        "axis":{"title":"Year","tickCount":5,"grid": false, "ticks": false}},
         "y": {
           "aggregate": "sum", 
           "field": "Count_median",
           "sort":"color",
-          "title":"Number of People Living with HIV"
+          "title":"Number of People with HIV",
+          "axis": {"grid": false, "ticks": false}
         },
         "color": {
         "field": "WHO Region",
@@ -80,7 +81,7 @@
         "tooltip": [
           {"field": "Year","timeUnit":"year"},
           {"field": "WHO Region"},
-          {"aggregate":"sum","field": "Count_median", "type": "quantitative","format": ","}
+          {"aggregate":"sum","field": "Count_median", "type": "quantitative","format": ",","title":"Number of Cases"}
         ]
       }
     
@@ -125,8 +126,9 @@
               },        "y": {
               "field": "Count_median",
               "type": "quantitative",
-              "scale": {"zero": false},
-              "title":"Number of People Living with HIV"
+              "scale": {"type": "log"},
+            "axis": {"grid": false, "ticks": false},
+              "title":"Number of Cases"
             }
           }
         },
@@ -187,7 +189,9 @@
             "field": "Count_median",
             "type": "quantitative",
             "aggregate":"sum",
-            "title":"Number of People Living with HIV"
+            "title":"Number of People Living with HIV",
+            "scale": {"type": "log"},
+            "axis": {"grid": false, "ticks": false}
         },
         "x": {
             "field": "WHO Region",
@@ -222,7 +226,7 @@
                 "type": "quantitative",
                 "field": "Count_median",        
             "aggregate":"sum",
-            "title":"Number of People Living with HIV",
+            "title":"Number of Cases",
             "format": ","
               }
             ]

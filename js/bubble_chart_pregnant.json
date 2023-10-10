@@ -140,7 +140,8 @@
           {
             "field": "Needing antiretrovirals_median",
             "type": "quantitative",
-            "format": ","
+            "format": ",",
+            "title": "Needing ART"
           },
           {
             "field": "WHO Region",
@@ -153,7 +154,8 @@
           {
             "field": "Percentage Recieved_median",
             "type": "quantitative",
-            "format": ","
+            "format": ",",
+            "title": "% ART Coverage"
           }
         ]
       }
@@ -206,7 +208,8 @@
           {
             "field": "Needing antiretrovirals_median",
             "type": "quantitative",
-            "format": ","
+            "format": ",",
+            "title": "Needing ART"
           },
           {
             "field": "WHO Region",
@@ -219,7 +222,8 @@
           {
             "field": "Percentage Recieved_median",
             "type": "quantitative",
-            "format": ","
+            "format": ",",
+            "title": "% ART Coverage"
           }
         ]
       }

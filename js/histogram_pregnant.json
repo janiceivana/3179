@@ -44,7 +44,7 @@
         "font": "Lora"
       },
       "width": 400,
-      "height": 250,
+      "height": 285,
       "mark": {
         "type": "bar",
         "tooltip": true,
@@ -72,7 +72,7 @@
         "font": "Lora"
       },
       "width": 400,
-      "height": 250,
+      "height": 285,
       "params": [
         {
           "name": "brush",
@@ -91,7 +91,7 @@
       },
       "encoding": {
         "x": {
-          "field": "Percentage Recieved_median","title":"% ART Received for Pregnant Women with HIV",
+          "field": "Percentage Recieved_median","title":"% ART Received",
           "bin": {
             "maxbins": 10
           }

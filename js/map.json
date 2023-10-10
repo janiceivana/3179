@@ -168,7 +168,8 @@
           {
             "field": "Count_median",
             "type": "quantitative",
-            "format": ","
+            "format": ",",
+            "title": "Death Cases"
           }
         ]
       }
