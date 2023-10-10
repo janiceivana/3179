@@ -52,8 +52,7 @@
           "aggregate": "sum", 
           "field": "Count_median",
           "sort":"color",
-          "title":"Number of People with HIV",
-          "axis": {"grid": false, "ticks": false}
+          "title":"Number of People with HIV"
         },
         "color": {
         "field": "WHO Region",
@@ -79,7 +78,7 @@
         }
         },
         "tooltip": [
-          {"field": "Year","timeUnit":"year"},
+          {"field": "Year","timeUnit":"year", "title":"Year"},
           {"field": "WHO Region"},
           {"aggregate":"sum","field": "Count_median", "type": "quantitative","format": ",","title":"Number of Cases"}
         ]

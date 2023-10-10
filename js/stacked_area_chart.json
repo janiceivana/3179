@@ -59,8 +59,7 @@
           "aggregate": "sum",
           "field": "Count_median",
           "sort": "color",
-          "title": "Number of Death caused by HIV",
-          "axis": {"grid": false, "ticks": false}
+          "title": "Number of Death caused by HIV"
         },
         "color": {
           "field": "WHO Region",
@@ -87,7 +86,8 @@
         "tooltip": [
           {
             "field": "Year",
-            "timeUnit": "year"
+            "timeUnit": "year",
+            "title":"Year"
           },
           {
             "field": "WHO Region"

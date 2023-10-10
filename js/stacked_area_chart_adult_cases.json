@@ -52,7 +52,7 @@
           "aggregate": "average", 
           "field": "Count_median",
           "sort":"color",
-          "title":"Average of Adult Cases (%)", "axis": {"grid": false, "ticks": false}
+          "title":"Average of Adult Cases (%)"
         },
         "color": {
           "field": "WHO Region",
