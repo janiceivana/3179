@@ -183,11 +183,16 @@
           "aggregate":"sum"
         },
         "color": {
-          "value": "black"
+          "condition": {
+            "test": "datum['Percentage Recieved_median']  > 50",
+            "value": "black"
+          },
+          "value": "red"
         },
+        
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'Sudan' || datum['Country'] == 'Burkina Faso'|| datum['Country'] == 'Argentina'|| datum['Country'] == 'Iran (Islamic Republic of)' || datum['Country'] == 'Ukraine' || datum['Country'] == 'Thailand'|| datum['Country'] == 'Malaysia'",
+            "test": "datum['Country'] == 'Sudan' || (datum['Country'] == 'Colombia' && datum['WHO Region'] == Continent_selection)|| (datum['Country'] == 'Philippines' && datum['WHO Region'] == Continent_selection) || (datum['Country'] == 'Indonesia' && datum['WHO Region'] == Continent_selection)|| (datum['Country'] == 'Uzbekistan' && datum['WHO Region'] == Continent_selection)||(datum['Country'] == 'Mali' && datum['WHO Region'] == Continent_selection) ||(datum['Country'] == 'Mauritius' && datum['WHO Region'] == Continent_selection) ||(datum['Country'] == 'Benin' && datum['WHO Region'] == Continent_selection) ||(datum['Country'] == 'Rwanda' && datum['WHO Region'] == Continent_selection) ||datum['Country'] == 'Burkina Faso'|| datum['Country'] == 'Argentina'|| (datum['Country'] == 'Iran (Islamic Republic of)' && datum['WHO Region'] == Continent_selection) || datum['Country'] == 'Ukraine' || datum['Country'] == 'Thailand'|| datum['Country'] == 'Malaysia'",
             "value": 1
           },
           "value": 0

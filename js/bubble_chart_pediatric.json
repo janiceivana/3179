@@ -183,11 +183,17 @@
           "aggregate":"sum"
         },
         "color": {
-          "value": "black"
+          "condition": {
+            "test": "datum['Estimated ART coverage among children (%)_median']  > 50",
+            "value": "black"
+          },
+          "value": "red"
         },
+        
+        
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'Algeria' || datum['Country'] == 'Argentina' || datum['Country'] == 'Morocco' || datum['Country'] == 'Ukraine' || datum['Country'] == 'Thailand' || datum['Country'] == 'Malaysia'",
+            "test": " (datum['Country'] == 'Madagascar' ) || datum['Country'] == 'Algeria' || (datum['Country'] == 'Argentina'&& datum['WHO Region'] == Continent_selection) || (datum['Country'] == 'Bahamas'&& datum['WHO Region'] == Continent_selection)|| (datum['Country'] == 'Djibouti'&& datum['WHO Region'] == Continent_selection)|| (datum['Country'] == 'Tajikistan'&& datum['WHO Region'] == Continent_selection)|| (datum['Country'] == 'Kazakhstan'&& datum['WHO Region'] == Continent_selection)|| (datum['Country'] == 'Philippines'&& datum['WHO Region'] == Continent_selection)|| (datum['Country'] == 'Indonesia'&& datum['WHO Region'] == Continent_selection)|| (datum['Country'] == 'Republic of Moldova'&& datum['WHO Region'] == Continent_selection)|| (datum['Country'] == 'Kyrgyzstan'&& datum['WHO Region'] == Continent_selection)|| (datum['Country'] == 'Romania'&& datum['WHO Region'] == Continent_selection)|| datum['Country'] == 'Morocco' || datum['Country'] == 'Ukraine' || (datum['Country'] == 'Thailand' && datum['WHO Region'] == Continent_selection) || (datum['Country'] == 'Malaysia' && datum['WHO Region'] == Continent_selection)",
             "value": 1
           },
           "value": 0

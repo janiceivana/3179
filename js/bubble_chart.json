@@ -182,11 +182,16 @@
           "aggregate":"sum"
         },
         "color": {
-          "value": "black"
+          "condition": {
+            "test": "datum['Estimated ART coverage among people living with HIV (%)_median']  > 50",
+            "value": "black"
+          },
+          "value": "red"
         },
+        
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'Colombia' || datum['Country'] == 'Zimbabwe' || datum['Country'] == 'Australia' || datum['Country'] == 'South Africa' || datum['Country'] == 'Indonesia'|| datum['Country'] == 'Morocco'|| datum['Country'] == 'Italy'|| datum['Country'] == 'Thailand'",
+            "test": "datum['Country'] == 'Madagascar' ||(datum['Country'] == 'Mongolia' && datum['WHO Region'] == Continent_selection) ||(datum['Country'] == 'Republic of Moldova' && datum['WHO Region'] == Continent_selection) ||(datum['Country'] == 'Pakistan' && datum['WHO Region'] == Continent_selection) ||(datum['Country'] == 'Belize' && datum['WHO Region'] == Continent_selection) || (datum['Country'] == 'Brazil' && datum['WHO Region'] == Continent_selection) ||(datum['Country'] == 'Colombia' && datum['WHO Region'] == Continent_selection) || (datum['Country'] == 'Namibia') || (datum['Country'] == 'Australia'&& datum['WHO Region'] == Continent_selection) || datum['Country'] == 'South Africa' || (datum['Country'] == 'Indonesia'&& datum['WHO Region'] == Continent_selection)|| (datum['Country'] == 'Morocco'&& datum['WHO Region'] == Continent_selection)|| (datum['Country'] == 'Italy'&& datum['WHO Region'] == Continent_selection)|| (datum['Country'] == 'Thailand'&& datum['WHO Region'] == Continent_selection)",
             "value": 1
           },
           "value": 0
