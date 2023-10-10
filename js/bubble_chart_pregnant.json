@@ -12,22 +12,22 @@
   "params": [
     {
       "name": "Received_Above",
-      "value": 0,
+      "value": 5,
       "bind": {
         "input": "range",
-        "min": 0,
-        "max": 100,
+        "min": 5,
+        "max": 95,
         "step": 1,
         "name": "Minimum % Received: "
       }
     },
     {
       "name": "Received_Below",
-      "value": 100,
+      "value": 95,
       "bind": {
         "input": "range",
-        "min": 0,
-        "max": 100,
+        "min": 5,
+        "max": 95,
         "step": 1,
         "name": "Maximum % Received: "
       }
@@ -66,10 +66,10 @@
       "filter": "datum['Needing antiretrovirals_median'] > 0"
     },
     {
-      "filter": "datum['Percentage Recieved_median'] < Received_Below"
+      "filter": "datum['Percentage Recieved_median'] <= Received_Below"
     },  
     {
-      "filter": "datum['Percentage Recieved_median'] > Received_Above"
+      "filter": "datum['Percentage Recieved_median'] >= Received_Above"
     },
     {
       "filter": "Continent_selection == null || datum['WHO Region'] == Continent_selection"

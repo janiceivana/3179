@@ -215,7 +215,6 @@
           "field": "Count_median",
           "type": "quantitative",
           "aggregate": "sum",
-          "scale": {"type": "log"},
           "axis": {"grid": false, "ticks": false},
           "title": "Number of Death caused by HIV"
         },

@@ -187,7 +187,6 @@
             "field": "Count_median",
             "type": "quantitative",
             "aggregate":"average",
-            "scale": {"type": "log"},
             "axis": {"grid": false, "ticks": false},
             "title":"Average of Adult Cases with HIV (%)"
         },

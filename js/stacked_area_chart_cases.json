@@ -190,7 +190,6 @@
             "type": "quantitative",
             "aggregate":"sum",
             "title":"Number of People Living with HIV",
-            "scale": {"type": "log"},
             "axis": {"grid": false, "ticks": false}
         },
         "x": {
