@@ -86,13 +86,18 @@
         "y": {
           "field": "Received Antiretrovirals",
           "type": "quantitative",
-          "aggregate":"sum"
+          "aggregate":"sum",
+          "scale": {"type": "log"},
+            "axis": {"grid": false, "ticks": false}
         },
         "x": {
           "field": "Needing antiretrovirals_median",
           "type": "quantitative",
           "aggregate":"sum",
-          "title": "Estimated number of pregnant women needing ART"
+          "title": "Estimated number of pregnant women needing ART",
+          
+          "scale": {"type": "log"},
+            "axis": {"grid": false, "ticks": false}
         },
         "size": {
           "field": "Percentage Recieved_median",

@@ -86,13 +86,17 @@
         "y": {
           "field": "Reported number of people receiving ART",
           "type": "quantitative",
-          "aggregate":"sum"
+          "aggregate":"sum",
+          "scale": {"type": "log"},
+            "axis": {"grid": false, "ticks": false}
         },
         "x": {
           "field": "Estimated number of people living with HIV_median",
           "type": "quantitative",
           "aggregate":"sum",
-          "title": "Estimated number of people living with HIV"
+          "title": "Estimated number of people living with HIV",
+          "scale": {"type": "log"},
+            "axis": {"grid": false, "ticks": false}
         },
         "size": {
           "field": "Estimated ART coverage among people living with HIV (%)_median",

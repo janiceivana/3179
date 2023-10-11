@@ -86,13 +86,19 @@
         "y": {
           "field": "Reported number of children receiving ART",
           "type": "quantitative",
-          "aggregate":"sum"
+          "aggregate":"sum",
+          
+          "scale": {"type": "log"},
+            "axis": {"grid": false, "ticks": false}
         },
         "x": {
           "field": "Estimated number of children needing ART based on WHO methods_median",
           "type": "quantitative",
           "aggregate":"sum",
-          "title": "Estimated number of children needing ART"
+          "title": "Estimated number of children needing ART",
+          
+          "scale": {"type": "log"},
+            "axis": {"grid": false, "ticks": false}
         },
         "size": {
           "field": "Estimated ART coverage among children (%)_median",
